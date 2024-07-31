@@ -1,0 +1,82 @@
+# dictionary
+
+# too add a key to the dictionary 
+
+word1 = {}
+word1["name"] = "venkat"
+word1["age"] = 27
+print(word1)
+
+# to check wheather given value is present in dictionary or not
+
+word2 = {"a":10,"b":20,"c":30,"d":40}
+checking_value = int(input("enter the value :"))
+if checking_value in word2.values():
+    print("the element is present")
+else:
+    print("the element is not present")
+
+# to combine 2 dictionaries
+
+word3 = {"name":"venkat","age":27}
+word4 = {"role":"software developer","working":"yes"}
+word3.update(word4)
+print(word3)
+
+# to convert a string into dictionary
+
+word5 = eval(input("enter a string"))
+print(word5)
+print(type(word5))
+
+# combining 2 dictionaries with common key and its values
+
+word6 = {"a":10,"b":20,"c":30}
+word7 = {"b":35,"c":40,"d":45}
+
+common_keys = {}
+
+for keys in word6:
+    if keys in word7:
+        common_keys[keys] = word6[keys] + word7[keys]
+    else:
+        common_keys[keys] = word6[keys]
+
+for keys in word7:
+    if keys not in common_keys:
+        common_keys[keys] = word7[keys]
+
+print(common_keys)
+
+# sorting dictonary by keys and values
+# sorted by keys
+
+word7 = {"b":20,"c":30,"d":10,"a":40}
+
+sorting_by_keys = dict(sorted(word7.items()))
+print(sorting_by_keys)
+
+# sorted by values 
+
+word8 = {"b":20,"c":30,"d":10,"a":40}
+sorting_by_values = dict(sorted(word8.items(),key=lambda item:item[1]))
+print(sorting_by_values)
+
+# to create a dictionary from the string
+
+word9 = "venkatramana"
+count = 0
+new_dicti = {}
+for i in word9:
+    count = word9.count(i)
+    new_dicti[i] = count
+print(new_dicti)
+
+# to get the sqare values of the dictionary keys
+
+word10 = {}
+for i in range(1,16):
+    key = str(i)
+    value = int(i*i)
+    word10[key]=value
+print(word10)
