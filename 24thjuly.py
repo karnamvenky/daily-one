@@ -61,3 +61,4 @@ for new_element in lst:
     if new_element not in unique_lst:
         unique_lst.append(new_element)
 print("the new list is",unique_lst)
+
